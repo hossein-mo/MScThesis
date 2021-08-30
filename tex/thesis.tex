@@ -1,0 +1,147 @@
+% !TEX TS-program = xelatex
+% !BIB program = bibtex
+\documentclass[a4paper,titlepage,12pt,fleqn,oneside]{report}
+\usepackage{color,cite,notoccite}
+\usepackage[titletoc,toc,title]{appendix}
+\usepackage{pdfpages}
+\usepackage{lipsum}
+\usepackage[top=40mm, bottom=40mm, left=35mm, right=35mm]{geometry}
+\usepackage{graphicx}
+\usepackage{amsmath,amsfonts,amssymb,multicol,makeidx}
+\usepackage[justification=centering]{caption}
+\usepackage{subcaption}
+\usepackage{placeins}
+\usepackage[usenames,table,xcdraw]{xcolor}
+\definecolor{SMH}{rgb}{0.,0.3,1.}
+\usepackage[colorlinks,linkcolor=SMH,citecolor=red,bookmarks]{hyperref}
+\usepackage{setspace}
+\usepackage{float}
+% \usepackage[backend=bibtex]{biblatex}
+% \bibliography{mybib.bib} 
+\doublespacing
+% \ExplSyntaxOn
+%   \cs_set_eq:NN \etex_iffontchar:D \tex_iffontchar:D
+% \ExplSyntaxOff
+\usepackage[displaymathdigits=default]{xepersian}
+\settextfont[Scale=1.1]{IRXLotus}
+{%
+\ExplSyntaxOn
+\cs_set_eq:NN
+\etex_iffontchar:D
+\tex_iffontchar:D
+\ExplSyntaxOff
+\setmathdigitfont[Scale=1.1]{IRXLotus}%
+}
+\setlatintextfont[Scale=0.85]{Times New Roman}
+\DeclareMathSizes{12}{10}{9}{8}
+\pagestyle{headings}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+
+\newpage
+\thispagestyle{empty}
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{Logo.pdf}
+\end{figure}
+\begin{center}
+\LARGE{دانشگاه شهید بهشتی}\\
+\LARGE{دانشکده فیزیک}\\
+\end{center}
+% \vspace{5mm}
+\begin{center}
+پایان‌نامه جهت اخذ درجه کارشناسی ارشد فیزیک\\
+گرایش سیستم‌های پیچیده و دینامیک غیرخطی
+\end{center}
+% \vspace{0.5cm}
+\begin{center}
+\Huge{مدل‌سازی و تخمین حافظه برای فرایندهای غیرمارکوف وابسته}
+\end{center}
+\vspace{0.5cm}
+\begin{center}
+    اساتید راهنما: \\
+ دکتر سید علی حسینی\\
+دکتر غلام‌رضا جعفری
+
+استاد مشاور:
+
+دکتر طیب جمالی
+\end{center}
+% \vspace{0.5cm}
+\begin{center}
+نگارنده: حسین مطهری
+\end{center}
+\vspace{0.5cm}
+\begin{center}
+شهریور ۹۹
+\end{center}
+% ==========================================================
+\includepdf[width=\textwidth]{besmellah1.pdf}
+
+\newpage
+\thispagestyle{empty}
+تشکر و قدردانی
+
+\vspace{1cm}
+
+از اساتید محترم راهنما دکتر سید علی حسینی و دکتر غلام‌رضا جعفری و همه دوستان عزیزی که مرا در به ثمر رساندن این پایان‌نامه یاری کردند، به ویژه از دکتر طیب جمالی که در شکل‌گیری این پایان‌نامه نقش شایانی داشته‌اند، صمیمانه تشکر می‌کنم.
+\newpage
+\input{abstract.tex}
+\tableofcontents
+\listoffigures
+\listoftables
+
+\input{introduction.tex}
+\input{chapter1.tex}
+\input{chapter2.tex}
+\input{chapter3.tex}
+\input{chapter4.tex}
+\input{chapter5.tex}
+
+\bibliographystyle{unsrt-fa}
+\bibliography{mybib}
+
+\input{abstract_en.tex}
+\nocite{*}
+
+\newpage
+\thispagestyle{empty}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.3\textwidth]{Logo.pdf}
+\end{center}
+\end{figure}
+\begin{center}
+\LARGE{\lr{Shahid Beheshti University}}\\
+\LARGE{Physics Department}\\
+\end{center}
+\vspace{.25cm}
+\begin{center}
+    \lr{A dissertation submitted for the degree of Master of Science in Physics}\\
+    \lr{(Complex Systems and Nonlinear Dynamic)}
+\end{center}
+% \vspace{0.5cm}
+\begin{center}
+\Huge{\lr{Modeling and memory estimation for dependent non-Markov processes}}
+\end{center}
+\vspace{0.25cm}
+\begin{center}
+
+\lr{Supervisers:}\\
+\lr{Dr. A. Hosseini}\\
+\lr{Dr. G. Jafari}
+
+\lr{Adviser:}\\
+\lr{Dr. T. Jamali}
+\end{center}
+% \vspace{0.25cm}
+\begin{center}
+\lr{By: Hossein Motahari}
+\end{center}
+% \vspace{0.25cm}
+\begin{center}
+\lr{September 2020}
+\end{center}
+
+\end{document}
